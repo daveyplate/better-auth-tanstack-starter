@@ -2,6 +2,7 @@ import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-r
 import type { ReactNode } from "react"
 
 import { Header } from "@/components/header"
+import { Toaster } from "@/components/ui/sonner"
 import globalsCss from "@/styles/globals.css?url"
 import { Providers } from "../providers"
 
@@ -52,7 +53,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
                         {children}
                     </div>
                 </Providers>
-
+                <Toaster />
                 <Scripts />
             </body>
         </html>
