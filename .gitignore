@@ -1,15 +1,55 @@
-node_modules
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+.next/
+.out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+
+# Database
+*.sqlite
+*.db
+
+# Drizzle migrations (optional, if you want to keep only schema, not generated SQL)
+migrations/*.sql
+
+# VSCode settings
+.vscode/
+
+# Coverage
+coverage/
+
+# Misc
+*.local
+*.log
+
+# Sensitive files
+supabase/.env
+supabase/.env.*
+
 package-lock.json
 yarn.lock
 
-.DS_Store
 .cache
-.env
 .vercel
 .output
 .vinxi
 
-/build/
 /api/
 /server/build
 /public/build
@@ -21,6 +61,5 @@ yarn.lock
 /blob-report/
 /playwright/.cache/
 
-.vscode
 .turbo
 routeTree.gen.ts
