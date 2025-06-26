@@ -23,4 +23,8 @@ yarn.lock
 
 .vscode
 .turbo
+.tanstack
+.nitro
 routeTree.gen.ts
+migrations
+
