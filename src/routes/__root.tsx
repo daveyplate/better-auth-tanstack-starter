@@ -23,6 +23,11 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
+        name: "description",
+        content:
+          "Better Auth TanStack Starter with Postgres, Drizzle, shadcn/ui and TanStack Query",
+      },
+      {
         title: "Better Auth TanStack Starter",
       },
     ],
