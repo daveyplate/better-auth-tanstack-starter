@@ -25,7 +25,6 @@ yarn.lock
 .turbo
 .tanstack
 .nitro
+.output
 routeTree.gen.ts
 migrations
-
-working/
