@@ -1,8 +1,8 @@
 // import { cloudflare } from "@cloudflare/vite-plugin"
 import tailwindcss from "@tailwindcss/vite"
+import { nitroV2Plugin } from "@tanstack/nitro-v2-vite-plugin"
 import { tanstackStart } from "@tanstack/react-start/plugin/vite"
 import viteReact from "@vitejs/plugin-react"
-import { nitro } from "nitro/vite"
 import { defineConfig } from "vite"
 import devtoolsJson from "vite-plugin-devtools-json"
 import viteTsConfigPaths from "vite-tsconfig-paths"
@@ -14,7 +14,7 @@ const config = defineConfig({
         }),
         tailwindcss(),
         tanstackStart(),
-        nitro(),
+        nitroV2Plugin({ preset: "vercel" }),
         viteReact(),
         devtoolsJson()
     ]
