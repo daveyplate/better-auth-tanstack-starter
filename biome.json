@@ -1,60 +1,32 @@
 {
-    "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+    "$schema": "https://biomejs.dev/schemas/2.2.7/schema.json",
     "vcs": {
         "enabled": true,
         "clientKind": "git",
-        "useIgnoreFile": true,
-        "defaultBranch": "main"
+        "useIgnoreFile": true
     },
     "files": {
-        "ignore": ["./components/ui/**", "./migrations/**", "routeTree.gen.ts"]
+        "ignoreUnknown": true,
+        "includes": ["**", "!**/src/routeTree.gen.ts", "!**/*.css"]
     },
     "formatter": {
+        "enabled": true,
         "indentStyle": "space",
-        "indentWidth": 4,
-        "lineWidth": 100
+        "indentWidth": 4
     },
+    "assist": { "actions": { "source": { "organizeImports": "on" } } },
     "linter": {
+        "enabled": true,
         "rules": {
-            "a11y": {
-                "noSvgWithoutTitle": "off",
-                "useGenericFontNames": "off"
-            },
-            "suspicious": {
-                "noArrayIndexKey": "off",
-                "noDoubleEquals": {
-                    "fix": "safe",
-                    "level": "warn",
-                    "options": {}
-                }
-            },
+            "recommended": true,
             "style": {
-                "noNonNullAssertion": "off",
-                "useSelfClosingElements": {
-                    "fix": "safe",
-                    "level": "warn"
-                },
-                "useTemplate": {
-                    "fix": "safe",
-                    "level": "warn"
-                }
-            },
-            "correctness": {
-                "noUnusedImports": "info"
-            },
-            "nursery": {
-                "useSortedClasses": {
-                    "fix": "safe",
-                    "level": "info",
-                    "options": {
-                        "functions": ["cn"]
-                    }
-                }
+                "noNonNullAssertion": "off"
             }
         }
     },
     "javascript": {
         "formatter": {
+            "quoteStyle": "double",
             "semicolons": "asNeeded",
             "trailingCommas": "none"
         }
