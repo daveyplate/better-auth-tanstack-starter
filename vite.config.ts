@@ -13,11 +13,7 @@ const config = defineConfig({
             projects: ["./tsconfig.json"]
         }),
         tailwindcss(),
-        tanstackStart({
-            prerender: {
-                enabled: true
-            }
-        }),
+        tanstackStart(),
         nitro(),
         viteReact(),
         devtoolsJson()
